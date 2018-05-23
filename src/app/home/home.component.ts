@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Todo } from '../todos/todo';
+import { Category } from '../categories/category';
+import { TodoDataService } from '../todos/todo-data.service';
+import { CategoryDataService } from '../categories/category-data.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  providers: [TodoDataService, CategoryDataService]
 })
-// export class AppComponent implements OnInit {
-export class AppComponent {
+export class HomeComponent implements OnInit {
 
-  constructor() {
-  }
-/*   newTodo: Todo = new Todo();
+  newTodo: Todo = new Todo();
   newCategory: Category = new Category();
   selectedCategory: Category;
 
@@ -95,5 +97,6 @@ export class AppComponent {
     this.addInitialTodo(initTodo);
     initTodo = {'title' : 'Task3', 'complete': true, 'id' : null , category: 1 };
     this.addInitialTodo(initTodo);
-  } */
+  }
+
 }

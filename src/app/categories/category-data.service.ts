@@ -10,8 +10,8 @@ export class CategoryDataService {
   // automatic incrementing of id's
   lastId = 0;
 
-    // Placeholder for category's
-    categories: Category[] = [];
+  // Placeholder for category's
+  categories: Category[] = [];
 
   constructor() { }
 

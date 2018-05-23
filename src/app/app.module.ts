@@ -7,16 +7,24 @@ import { AppComponent } from './app.component';
 
 import { MDBBootstrapModule } from './../../angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+import { TodosComponent } from './todos/todos.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodosComponent,
+    CategoriesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
